@@ -1,0 +1,28 @@
+
+
+
+ul {
+    list-style: none;
+}
+
+.nav-bar{
+    display: block;
+    width: 100%;
+    /*background-color: ;*/
+
+}
+
+.nav-bar > ul{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+}
+
+.nav-bar > ul > li{
+    width: 150px;
+
+}
+.nav-bar  i {
+    padding: 10px;
+}
