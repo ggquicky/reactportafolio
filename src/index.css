@@ -1,3 +1,12 @@
+:root {
+  --navBar: #4EA5D9;
+  --navBarLinks: #44CFCB;
+  --bGround1: #122C34;
+  --bGround2: #224870;
+  --bGround3: #2A4494;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
