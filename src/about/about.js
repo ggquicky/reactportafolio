@@ -1,5 +1,6 @@
 
 import profileP from './profile.jpeg';
+import './about.css';
 
 function About(){
     return(
