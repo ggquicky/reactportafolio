@@ -1,9 +1,11 @@
 
+import profileP from './profile.jpeg';
+
 function About(){
     return(
         <div className= "sectionAbout" id="sectionAbout">
             <div className="mobile">
-            <img src='./profile.jpeg' alt="profile"/>
+            <img className ="profilePic" src={profileP} alt="profile"/>
             <h1>Hi, I`m Erick Narvaez</h1>
             <h2>a starting web developer</h2>
 

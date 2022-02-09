@@ -1,4 +1,4 @@
-@import "//webportafolio/src/index.css";
+@import '../index.css';
 
 
 ul {
@@ -9,18 +9,21 @@ ul {
     display: block;
     width: 100%;
     background-color: var(--navBar);
-
+    height: 50px;
+    top: 0;
+    left: 0;;
 }
 
 .nav-bar > ul{
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: space-evenly;
     
 }
 
 .nav-bar > ul > li{
-    width: 150px;
+    width: auto;
 
 }
 .nav-bar  i {
@@ -30,6 +33,7 @@ ul {
 
 .nav-bar > ul > li > a{
     color: var(--navBarLinks);
+    padding: 30px;
 
 }
 
