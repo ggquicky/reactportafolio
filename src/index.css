@@ -5,6 +5,10 @@
   --bGround2: #224870;
   --bGround3: #2A4494;
 }
+html{
+  scroll-behavior: smooth;
+}
+
 
 *{
   margin: 0;

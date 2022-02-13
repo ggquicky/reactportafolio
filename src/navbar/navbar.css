@@ -6,7 +6,8 @@ ul {
 }
 
 .nav-bar{
-    display: block;
+    position:fixed;
+    display:block;
     width: 100%;
     background-color: var(--navBar);
     height: auto;

@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class Mywork extends Component {
   render() {
     return (
-      <div>
+      <div id="myWork">
         <h1>These are some of my projects</h1>
         <div className="projects-grid">
           <a
