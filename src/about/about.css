@@ -9,15 +9,26 @@
 .sectionAbout {
     height: 100vh;
     width: auto;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-direction: row;
 }
-.sectionAbout > h1{
+
+.sectionAbout > div {
+  width: 100%;
+}
+
+.aboutHeader > h1{
   transition: color 2s ease-out;
   
   
 }
-.sectionAbout > h1:hover{
+.aboutHeader > h1:hover{
     
     color: var(--hoverEffect);
     
   }
+
+
   
