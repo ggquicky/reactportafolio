@@ -1,11 +1,23 @@
 @import '../index.css';
 
 .profilePic{
-    height: auto;
     width: 250px;
+    border-radius:30px;
+    height:auto;
 }
 
 .sectionAbout {
     height: 100vh;
     width: auto;
 }
+.sectionAbout > h1{
+  transition: color 2s ease-out;
+  
+  
+}
+.sectionAbout > h1:hover{
+    
+    color: var(--hoverEffect);
+    
+  }
+  

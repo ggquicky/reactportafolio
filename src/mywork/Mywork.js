@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import "./Mywork.css"
 
 export default class Mywork extends Component {
   render() {
     return (
-      <div id="myWork">
+      <div id="sectionMyWork">
         <h1>These are some of my projects</h1>
         <div className="projects-grid">
           <a
