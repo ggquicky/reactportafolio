@@ -7,16 +7,22 @@
 }
 
 .sectionAbout {
-    height: 100vh;
-    width: auto;
+  
+    
+    width: 100%;
     display: flex;
     align-items:center;
-    justify-content: space-between;
-    flex-direction: row;
+    justify-content:center;
+    flex-direction: column;
+    row-gap: 30px;
+    
 }
 
-.sectionAbout > div {
-  width: 100%;
+.aboutHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 50px;
 }
 
 .aboutHeader > h1{
@@ -24,11 +30,34 @@
   
   
 }
-.aboutHeader > h1:hover{
-    
-    color: var(--hoverEffect);
-    
+
+
+  @keyframes shake {
+    0% { transform: skewX(-15deg); }
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); }  
   }
 
 
+.letterAnimation{
+  display: inline-block;
   
+  
+}
+
+.letterAnimation:hover{
+  color: var(--navBar);
+  transform: skewX(15deg);
+}
+
+.aboutText{
+  display: block;
+  margin: auto;
+  text-align: justify;
+  width: 60%;
+  font-size: 20px;
+}
+

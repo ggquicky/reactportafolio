@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Contactme.css"
 
 
-export default class Contactme extends Component {
+export default class contactMe extends Component {
   render() {
     return (
       <div id="sectionContactme" className="sectionContactme">
@@ -17,21 +17,21 @@ export default class Contactme extends Component {
             href="https://github.com/ggquicky"
             target="_blank"
           >
-            <i class="fab fa-github"></i>Github
+            <i className="fab fa-github"></i>Github
           </a>
           <a
             rel="nofollow noopener noreferrer"
             href="https://twitter.com/Enarvaezr"
             target="_blank"
           >
-            <i class="fab fa-twitter"></i>Twitter
+            <i className="fab fa-twitter"></i>Twitter
           </a>
           <a
             rel="nofollow noopener noreferrer"
             href="mailto:ggquicky@gmail.com"
             target="_blank"
           >
-            <i class="fas fa-envelope-open-text"></i>Send a Mail
+            <i className="fas fa-envelope-open-text"></i>Send a Mail
           </a>
         </div>
         <div className="counter">

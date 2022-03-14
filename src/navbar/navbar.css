@@ -1,43 +1,30 @@
 @import '../index.css';
 
-
-ul {
-    list-style: none;
-}
-
 .nav-bar{
     position:fixed;
-    display:block;
-    width: 100%;
-    background-color: var(--navBar);
-    height: auto;
-    top: 0;
-    left: 0;;
-}
-
-.nav-bar > ul{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    background-color: var(--navBar);
     height: 50px;
-    justify-content:flex-end;
+    top: 0;
+    left: 0;
     align-items: center;
+    justify-content: flex-end;
+    column-gap: 30px;
+    padding: 0px 32px;
 }
 
-.nav-bar > ul > li{
-    width: auto;
-    height: auto;
-}
-.nav-bar  i {
-    padding: 5px;
-    
-}
-
-.nav-bar > ul > li > a{
+.navItems{
     color: var(--navBarLinks);
-    padding: 20px;
-
+    text-decoration: none;
+    font-size: 20px;
 }
 
-.nav-bar > ul> li > a:hover {
+.navItems:hover {
     color: var(--bGround1);
+}
+
+.icons{
+    padding: 10px;
 }

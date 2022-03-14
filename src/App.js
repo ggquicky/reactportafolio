@@ -1,5 +1,5 @@
 
-
+import './App.css';
 import Navbar from './navbar/navbar';
 import About from './about/about';
 import Mywork from './mywork/Mywork';
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Navbar/>
         <About />
-        <Mywork />
+       
         <Contactme />
     </div>
   );
