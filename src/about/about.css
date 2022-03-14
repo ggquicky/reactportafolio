@@ -1,9 +1,10 @@
 @import '../index.css';
 
 .profilePic{
-    width: 250px;
+    width: 200px;
     border-radius:30px;
     height:auto;
+    object-fit: cover;
 }
 
 .sectionAbout {
