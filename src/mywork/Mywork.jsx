@@ -1,13 +1,4 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  Image,
-  Link,
-  Text,
-  Wrap,
-  WrapItem,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 
 const projects = [
   {

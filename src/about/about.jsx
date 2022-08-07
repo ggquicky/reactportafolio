@@ -38,7 +38,7 @@ export default function about() {
         <Box>
           <Heading transition=" color 2s ease-out">
             {titleArray.map(function (value, index) {
-              if (value == " ") {
+              if (value === " ") {
                 return (
                   <Text
                     display="inline-block"
@@ -66,7 +66,7 @@ export default function about() {
           </Heading>
           <Box fontSize="24px">
             {subTitleArray.map(function (value, index) {
-              if (value == " ") {
+              if (value === " ") {
                 return (
                   <Text
                     display="inline-block"

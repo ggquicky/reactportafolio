@@ -1,6 +1,5 @@
 import {
   Box,
-  Collapse,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -9,8 +8,6 @@ import {
   DrawerOverlay,
   Icon,
   IconButton,
-  Link,
-  Stack,
   useDisclosure,
 } from "@chakra-ui/react";
 import {
@@ -19,12 +16,7 @@ import {
   MdAttachEmail,
 } from "react-icons/md";
 
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-} from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 
 export default function Navbar() {
