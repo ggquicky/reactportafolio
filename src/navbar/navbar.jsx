@@ -1,11 +1,35 @@
-import { Box, Icon, Link } from "@chakra-ui/react";
+import {
+  Box,
+  Collapse,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
+  Icon,
+  IconButton,
+  Link,
+  Stack,
+  useDisclosure,
+} from "@chakra-ui/react";
 import {
   MdAssignmentInd,
   MdIntegrationInstructions,
   MdAttachEmail,
 } from "react-icons/md";
 
-export default function navbar() {
+import {
+  HamburgerIcon,
+  CloseIcon,
+  ChevronDownIcon,
+  ChevronRightIcon,
+} from "@chakra-ui/icons";
+import { useState } from "react";
+
+export default function Navbar() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [placement] = useState("right");
   let navMenuObj = [
     {
       name: "Home",
@@ -49,16 +73,56 @@ export default function navbar() {
             key={index}
             href={value.href}
             fontSize="20px"
-            display="flex"
             alignItems="center"
             columnGap="8px"
             _hover={{ color: "#DFF6FF" }}
+            display={{ base: "none", sm: "flex" }}
           >
             <Icon as={value.icon} />
             <Box>{value.name}</Box>
           </Box>
         );
       })}
+      <IconButton
+        color="white"
+        display={{ base: "block", sm: "none" }}
+        onClick={onOpen}
+        icon={
+          isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+        }
+        variant={"ghost"}
+        aria-label={"Toggle Navigation"}
+      />
+
+      <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerHeader borderBottomWidth="1px">
+            Basic Drawer
+            <DrawerCloseButton />
+          </DrawerHeader>
+          <DrawerBody>
+            {navMenuObj.map(function (value, index) {
+              return (
+                <Box
+                  as="a"
+                  color="navBar"
+                  key={index}
+                  href={value.href}
+                  fontSize="20px"
+                  alignItems="center"
+                  columnGap="8px"
+                  display={{ base: "flex" }}
+                  onClick={onClose}
+                >
+                  <Icon as={value.icon} />
+                  <Box>{value.name}</Box>
+                </Box>
+              );
+            })}
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
     </Box>
   );
 }

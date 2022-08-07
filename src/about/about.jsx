@@ -10,12 +10,13 @@ export default function about() {
 
   return (
     <Flex
+      id="sectionAbout"
+      marginBlockStart="60px"
       direction={{ base: "column" }}
-      h="100vh"
+      h={{ base: "auto" }}
       w="100%"
       justify="center"
       align="center"
-      id="sectionAbout"
       gap={{ base: "16px", md: "60px" }}
     >
       <Box

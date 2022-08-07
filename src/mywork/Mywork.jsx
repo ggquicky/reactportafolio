@@ -30,7 +30,7 @@ const projects = [
 export default function Mywork() {
   return (
     <Flex
-      h="100vh"
+      h="auto"
       flexDir="column"
       rowGap={{ base: "16px", md: "32px" }}
       alignItems="center"
