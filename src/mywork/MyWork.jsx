@@ -61,6 +61,7 @@ export default function MyWork() {
               w="100%"
               h="calc(100% - 6.8rem)"
               objectFit="fill"
+              boxShadow="md"
               borderRadius="32px"
               src={project.imgUrl}
               alt="project"
