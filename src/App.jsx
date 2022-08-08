@@ -1,7 +1,7 @@
 import Navbar from "./navbar/navbar";
 import About from "./about/about";
 import MyWork from "./mywork/MyWork";
-import ContactMe from "./contactme/Contactme";
+import ContactMe from "./contactme/ContactMe";
 import { Flex } from "@chakra-ui/react";
 
 export default function App() {

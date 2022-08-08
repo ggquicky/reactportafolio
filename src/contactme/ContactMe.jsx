@@ -2,7 +2,7 @@ import { Flex, Heading, Icon, Link, Text } from "@chakra-ui/react";
 import { GoMarkGithub } from "react-icons/go";
 import { FaMailBulk, FaTwitterSquare } from "react-icons/fa";
 
-export default function contactMe() {
+export default function ContactMe() {
   const socials = [
     {
       name: "Twitter",
@@ -48,9 +48,7 @@ export default function contactMe() {
           return (
             <Link
               key={index}
-              rel="nofollow noopener noreferrer"
               href={social.action}
-              target="_blank"
               fontSize={{ base: "30px", md: "24px" }}
               _hover={{ textDecoration: "none", color: "navBar" }}
             >

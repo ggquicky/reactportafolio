@@ -46,7 +46,7 @@ export default function MyWork() {
             display="flex"
             flexDirection="column"
             alignItems="center"
-            href="/"
+            href={project.url}
             rel="nofollow noopener noreferrer"
             target="_blank"
             key={index}
