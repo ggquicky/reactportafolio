@@ -17,11 +17,10 @@ import {
 } from "react-icons/md";
 
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { useState } from "react";
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [placement] = useState("right");
+
   let navMenuObj = [
     {
       name: "Home",
@@ -80,20 +79,19 @@ export default function Navbar() {
         display={{ base: "block", sm: "none" }}
         onClick={onOpen}
         icon={
-          isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+          isOpen ? <CloseIcon w={6} h={6} /> : <HamburgerIcon w={6} h={6} />
         }
         variant={"ghost"}
         aria-label={"Toggle Navigation"}
       />
 
-      <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
+      <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerHeader borderBottomWidth="1px">
-            Basic Drawer
-            <DrawerCloseButton />
+          <DrawerHeader>
+            <DrawerCloseButton w={6} h={6} />
           </DrawerHeader>
-          <DrawerBody>
+          <DrawerBody display="flex" flexDirection="column" rowGap="16px">
             {navMenuObj.map(function (value, index) {
               return (
                 <Box

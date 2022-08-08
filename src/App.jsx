@@ -12,10 +12,10 @@ export default function App() {
       bg="bGround"
       flexDirection="column"
     >
-      <Navbar />
       <About />
       <Mywork />
       <ContactMe />
+      <Navbar />
     </Flex>
   );
 }
