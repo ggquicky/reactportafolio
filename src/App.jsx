@@ -1,6 +1,6 @@
 import Navbar from "./navbar/navbar";
 import About from "./about/about";
-import Mywork from "./mywork/Mywork";
+import MyWork from "./mywork/MyWork";
 import ContactMe from "./contactme/Contactme";
 import { Flex } from "@chakra-ui/react";
 
@@ -13,7 +13,7 @@ export default function App() {
       flexDirection="column"
     >
       <About />
-      <Mywork />
+      <MyWork />
       <ContactMe />
       <Navbar />
     </Flex>

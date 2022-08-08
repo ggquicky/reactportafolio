@@ -13,7 +13,7 @@ export default function about() {
       id="sectionAbout"
       marginBlockStart="60px"
       direction={{ base: "column" }}
-      h={{ base: "auto" }}
+      h={{ base: "auto", md: "100vh" }}
       w="100%"
       justify="center"
       align="center"

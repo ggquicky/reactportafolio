@@ -1,27 +1,36 @@
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import shoesFlex from "./media/soleanklepreview.jpg";
+import calulator from "./media/calculatorjs.jpg";
+import ninjamailpreview from "./media//ninjamailpreview.jpg";
+import creditcardspreview from "./media/creditcardspreview.jpg";
 
 const projects = [
   {
-    url: "",
+    url: "https://ggquicky.github.io/nerdifyLabs-shoesflex/",
     name: "shoes Flex ",
-    imgUrl: "",
+    imgUrl: shoesFlex,
   },
   {
-    url: "",
+    url: "https://ggquicky.github.io/nerdifyLabs-ninjaMail/",
     name: "Ninja Mail ",
-    imgUrl: "",
+    imgUrl: ninjamailpreview,
   },
   {
-    url: "",
+    url: "https://ggquicky.github.io/nerdifyLabs-creditcard/",
     name: "Credit Card ",
-    imgUrl: "",
+    imgUrl: creditcardspreview,
+  },
+  {
+    url: "https://ggquicky.github.io/nerdifyLabs-calculator/",
+    name: "Calculator ",
+    imgUrl: calulator,
   },
 ];
 
-export default function Mywork() {
+export default function MyWork() {
   return (
     <Flex
-      h="auto"
+      h={{ base: "auto", md: "100vh" }}
       flexDir="column"
       rowGap={{ base: "16px", md: "32px" }}
       alignItems="center"
@@ -41,7 +50,7 @@ export default function Mywork() {
             rel="nofollow noopener noreferrer"
             target="_blank"
             key={index}
-            w={{ base: "auto" }}
+            w={{ base: "auto", md: "400px" }}
             minWidth="304px"
             h="300px"
             textDecoration="none"
@@ -49,19 +58,18 @@ export default function Mywork() {
             <Image
               transition="ease-in-out"
               transitionDelay="100ms"
-              _hover={{ boxShadow: "dark-lg" }}
-              w="auto"
-              objectFit="cover"
+              w="100%"
+              h="calc(100% - 6.8rem)"
+              objectFit="fill"
               borderRadius="32px"
-              src="https://picsum.photos/290/284"
+              src={project.imgUrl}
               alt="project"
+              _hover={{ boxShadow: "dark-lg" }}
             />
             <Text
               fontSize={{ base: "24px", md: "32px" }}
-              color="white"
-              top="-150px"
+              color="textColor"
               textAlign="center"
-              position="relative"
             >
               &lt;
               {project.name}
