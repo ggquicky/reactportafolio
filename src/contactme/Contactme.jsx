@@ -31,7 +31,7 @@ export default function contactMe() {
       h={{ base: "auto", md: "100vh" }}
     >
       <Flex flexDirection="column" justifyContent="center" alignItems="center">
-        <Heading fontSize={{ base: "24px", md: "36px" }} as="h3">
+        <Heading fontSize={{ base: "30px", md: "36px" }} as="h3">
           Let's work together!!
         </Heading>
         <Text fontSize={{ base: "16px", md: "24px" }}>
@@ -51,7 +51,7 @@ export default function contactMe() {
               rel="nofollow noopener noreferrer"
               href={social.action}
               target="_blank"
-              fontSize={{ base: "16px", md: "24px" }}
+              fontSize={{ base: "30px", md: "24px" }}
               _hover={{ textDecoration: "none", color: "navBar" }}
             >
               <Icon as={social.icon} />
