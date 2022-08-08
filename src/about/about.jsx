@@ -96,7 +96,7 @@ export default function about() {
       </Box>
 
       <Box width={{ base: "auto", md: "600px" }}>
-        <Text color="textColor" textAlign="justify">
+        <Text color="textColor" textAlign="justify" fontWeight="bold">
           I’m a passionate web developer from Managua, Nicaragua. I’m a fast
           learner, proactive and reliable programmer. I consider that being on
           top of the latest technologies and trends is key to being successful
