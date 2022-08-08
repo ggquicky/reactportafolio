@@ -5,12 +5,12 @@ import { FaMailBulk, FaTwitterSquare } from "react-icons/fa";
 export default function ContactMe() {
   const socials = [
     {
-      name: "Twitter",
+      name: "Github",
       action: "https://twitter.com/Enarvaezr",
       icon: GoMarkGithub,
     },
     {
-      name: "Github",
+      name: "Twitter",
       action: "https://github.com/ggquicky",
       icon: FaTwitterSquare,
     },
