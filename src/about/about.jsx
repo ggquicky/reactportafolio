@@ -100,9 +100,7 @@ export default function about() {
           I’m a passionate web developer from Managua, Nicaragua. I’m a fast
           learner, proactive and reliable programmer. I consider that being on
           top of the latest technologies and trends is key to being successful
-          in this industry. For the past three months, I’ve been in an intensive
-          web development bootcamp where I’ve mastered all the necessary skills
-          to develop modern and responsive websites.
+          in this industry.
         </Text>
       </Box>
     </Flex>
