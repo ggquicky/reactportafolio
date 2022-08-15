@@ -6,12 +6,12 @@ export default function ContactMe() {
   const socials = [
     {
       name: "Github",
-      action: "https://twitter.com/Enarvaezr",
+      action: "https://github.com/ggquicky",
       icon: GoMarkGithub,
     },
     {
       name: "Twitter",
-      action: "https://github.com/ggquicky",
+      action: "https://twitter.com/Enarvaezr",
       icon: FaTwitterSquare,
     },
     {

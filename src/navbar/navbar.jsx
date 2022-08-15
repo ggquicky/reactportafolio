@@ -87,16 +87,16 @@ export default function Navbar() {
 
       <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
-        <DrawerContent>
+        <DrawerContent bg="navBar">
           <DrawerHeader>
-            <DrawerCloseButton w={6} h={6} />
+            <DrawerCloseButton color="white" w={6} h={6} />
           </DrawerHeader>
           <DrawerBody display="flex" flexDirection="column" rowGap="16px">
             {navMenuObj.map(function (value, index) {
               return (
                 <Box
                   as="a"
-                  color="navBar"
+                  color="white"
                   key={index}
                   href={value.href}
                   fontSize="20px"
