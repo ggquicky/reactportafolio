@@ -1,4 +1,4 @@
-import { Box, Flex, Icon, Text } from "@chakra-ui/react";
+import { Flex, Icon, Text } from "@chakra-ui/react";
 import { FaReact, FaVuejs, FaLaravel } from "react-icons/fa";
 import { SiChakraui, SiTailwindcss } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
