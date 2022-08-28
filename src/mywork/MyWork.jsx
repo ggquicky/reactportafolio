@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image } from "@chakra-ui/react";
 import shoesFlex from "./media/soleanklepreview.jpg";
 import calulator from "./media/calculatorjs.jpg";
 import ninjamailpreview from "./media//ninjamailpreview.jpg";
@@ -30,7 +30,7 @@ const projects = [
 export default function MyWork() {
   return (
     <Flex
-      h={{ base: "auto", md: "100vh" }}
+      width="100%"
       flexDir="column"
       rowGap={{ base: "16px", md: "32px" }}
       alignItems="center"
@@ -43,11 +43,11 @@ export default function MyWork() {
         {projects.map((project, index) => (
           <Box
             as="a"
+            href={project.url}
+            rel="nofollow noopener noreferrer"
             display="flex"
             flexDirection="column"
             alignItems="center"
-            href={project.url}
-            rel="nofollow noopener noreferrer"
             target="_blank"
             key={index}
             w={{ base: "auto", md: "400px" }}
@@ -59,23 +59,13 @@ export default function MyWork() {
               transition="ease-in-out"
               transitionDelay="100ms"
               w="100%"
-              h="calc(100% - 6.8rem)"
-              objectFit="fill"
-              boxShadow="md"
-              borderRadius="32px"
+              h="100%"
+              objectFit="cover"
               src={project.imgUrl}
               alt="project"
-              _hover={{ boxShadow: "dark-lg" }}
+              _hover={{ boxShadow: "lg" }}
+              borderRadius="24px"
             />
-            <Text
-              fontSize={{ base: "24px", md: "32px" }}
-              color="textColor"
-              textAlign="center"
-            >
-              &lt;
-              {project.name}
-              &#47;&gt;
-            </Text>
           </Box>
         ))}
       </Flex>

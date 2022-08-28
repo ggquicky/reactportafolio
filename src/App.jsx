@@ -1,5 +1,5 @@
 import Navbar from "./navbar/navbar";
-import About from "./about/about";
+import About from "./about/About";
 import MyWork from "./mywork/MyWork";
 import ContactMe from "./contactme/ContactMe";
 import { Flex } from "@chakra-ui/react";

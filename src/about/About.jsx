@@ -1,8 +1,9 @@
 import profileP from "./profile.jpeg";
 
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import Skills from "./Skills";
 
-export default function about() {
+export default function About() {
   const title = "Hi, I´m Erick Narvaez";
   const titleArray = title.split("");
   const subTitle = "a starting web developer";
@@ -13,8 +14,7 @@ export default function about() {
       id="sectionAbout"
       marginBlockStart="60px"
       direction={{ base: "column" }}
-      h={{ base: "auto", md: "100vh" }}
-      w="100%"
+      width="100%"
       justify="center"
       align="center"
       gap={{ base: "16px", md: "60px" }}
@@ -103,6 +103,14 @@ export default function about() {
           in this industry.
         </Text>
       </Box>
+      <Flex
+        flexDirection="column"
+        gap="30px"
+        width={{ base: "auto", md: "600px" }}
+      >
+        <Heading>My skills</Heading>
+        <Skills />
+      </Flex>
     </Flex>
   );
 }

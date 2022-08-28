@@ -28,14 +28,14 @@ export default function ContactMe() {
       alignItems="center"
       gap={{ base: "24px", md: "48px" }}
       id="sectionContactme"
-      h={{ base: "auto", md: "100vh" }}
+      width="100%"
     >
       <Flex flexDirection="column" justifyContent="center" alignItems="center">
         <Heading fontSize={{ base: "30px", md: "36px" }} as="h3">
           Let's work together!!
         </Heading>
         <Text fontSize={{ base: "16px", md: "24px" }}>
-          How do you like pizza?
+          How do you like coffee?
         </Text>
       </Flex>
       <Flex

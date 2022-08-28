@@ -1,5 +1,6 @@
 import {
   Box,
+  Flex,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -10,11 +11,6 @@ import {
   IconButton,
   useDisclosure,
 } from "@chakra-ui/react";
-import {
-  MdAssignmentInd,
-  MdIntegrationInstructions,
-  MdAttachEmail,
-} from "react-icons/md";
 
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
@@ -24,17 +20,16 @@ export default function Navbar() {
   let navMenuObj = [
     {
       name: "Home",
-      icon: MdAssignmentInd,
       href: "#sectionAbout",
     },
     {
       name: "My work",
-      icon: MdIntegrationInstructions,
+
       href: "#sectionMyWork",
     },
     {
       name: "Contact me",
-      icon: MdAttachEmail,
+
       href: "#sectionContactme",
     },
   ];
@@ -44,46 +39,49 @@ export default function Navbar() {
       as="nav"
       display="flex"
       position="fixed"
-      w="100%"
+      width="100%"
       flexDirection="row"
-      bg="navBar"
       h="50px"
       left="0px"
       top="0px"
       alignItems="center"
-      justifyContent="flex-end"
-      columnGap="30px"
+      justifyContent="space-around"
+      columnGap="32px"
       p="0px 32px"
-      boxShadow="md"
+      backdropFilter="auto"
+      backdropBlur="20px"
+      boxShadow="sm"
     >
-      {navMenuObj.map(function (value, index) {
-        return (
-          <Box
-            as="a"
-            color="navText"
-            key={index}
-            href={value.href}
-            fontSize="20px"
-            alignItems="center"
-            columnGap="8px"
-            _hover={{ color: "#DFF6FF" }}
-            display={{ base: "none", sm: "flex" }}
-          >
-            <Icon as={value.icon} />
-            <Box>{value.name}</Box>
-          </Box>
-        );
-      })}
-      <IconButton
-        color="white"
-        display={{ base: "block", sm: "none" }}
-        onClick={onOpen}
-        icon={
-          isOpen ? <CloseIcon w={6} h={6} /> : <HamburgerIcon w={6} h={6} />
-        }
-        variant={"ghost"}
-        aria-label={"Toggle Navigation"}
-      />
+      <Box>Welcome</Box>
+      <Flex columnGap="40px" p="0px 32px">
+        {navMenuObj.map(function (value, index) {
+          return (
+            <Box
+              as="a"
+              color="black"
+              key={index}
+              href={value.href}
+              fontSize="20px"
+              alignItems="center"
+              columnGap="8px"
+              _hover={{ color: "#DFF6FF" }}
+              display={{ base: "none", sm: "flex" }}
+            >
+              {value.name}
+            </Box>
+          );
+        })}
+        <IconButton
+          color="white"
+          display={{ base: "block", sm: "none" }}
+          onClick={onOpen}
+          icon={
+            isOpen ? <CloseIcon w={6} h={6} /> : <HamburgerIcon w={6} h={6} />
+          }
+          variant={"ghost"}
+          aria-label={"Toggle Navigation"}
+        />
+      </Flex>
 
       <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
