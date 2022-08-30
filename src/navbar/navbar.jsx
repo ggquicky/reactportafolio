@@ -7,7 +7,6 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
-  Icon,
   IconButton,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -52,7 +51,9 @@ export default function Navbar() {
       backdropBlur="20px"
       boxShadow="base"
     >
-      <Box fontWeight="bold">Welcome</Box>
+      <Box color="black" fontWeight="bold">
+        Welcome
+      </Box>
       <Flex columnGap="40px" p="0px 32px">
         {navMenuObj.map(function (value, index) {
           return (
@@ -64,7 +65,7 @@ export default function Navbar() {
               fontSize="20px"
               alignItems="center"
               columnGap="8px"
-              _hover={{ color: "#DFF6FF" }}
+              _hover={{ color: "white" }}
               display={{ base: "none", sm: "flex" }}
             >
               {value.name}
@@ -72,7 +73,7 @@ export default function Navbar() {
           );
         })}
         <IconButton
-          color="white"
+          color="black"
           display={{ base: "block", sm: "none" }}
           onClick={onOpen}
           icon={
@@ -85,7 +86,7 @@ export default function Navbar() {
 
       <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
-        <DrawerContent bg="navBar">
+        <DrawerContent bgGradient="linear-gradient(to left, #757f9a, #d7dde8)">
           <DrawerHeader>
             <DrawerCloseButton color="white" w={6} h={6} />
           </DrawerHeader>
@@ -94,7 +95,7 @@ export default function Navbar() {
               return (
                 <Box
                   as="a"
-                  color="white"
+                  color="black"
                   key={index}
                   href={value.href}
                   fontSize="20px"
@@ -103,7 +104,6 @@ export default function Navbar() {
                   display={{ base: "flex" }}
                   onClick={onClose}
                 >
-                  <Icon as={value.icon} />
                   <Box>{value.name}</Box>
                 </Box>
               );
