@@ -1,6 +1,6 @@
 import { Flex, Heading, Icon, Link, Text } from "@chakra-ui/react";
 import { GoMarkGithub } from "react-icons/go";
-import { FaMailBulk, FaTwitterSquare } from "react-icons/fa";
+import { FaMailBulk, FaLinkedin } from "react-icons/fa";
 
 export default function ContactMe() {
   const socials = [
@@ -10,9 +10,9 @@ export default function ContactMe() {
       icon: GoMarkGithub,
     },
     {
-      name: "Twitter",
-      action: "https://twitter.com/Enarvaezr",
-      icon: FaTwitterSquare,
+      name: "Linkedin",
+      action: "https://www.linkedin.com/in/erick-narvaez-b37a10107",
+      icon: FaLinkedin,
     },
     {
       name: "Mail",
@@ -50,7 +50,7 @@ export default function ContactMe() {
               key={index}
               href={social.action}
               fontSize={{ base: "30px", md: "24px" }}
-              _hover={{ textDecoration: "none", color: "navBar" }}
+              _hover={{ textDecoration: "none", color: "white" }}
             >
               <Icon as={social.icon} />
               {social.name}

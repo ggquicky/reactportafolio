@@ -21,7 +21,8 @@ export default function Skills() {
           flexDirection="column"
           justifyContent="center"
           align="center"
-          gap="8px"
+          gap={{ base: "32px", sm: "8px" }}
+          _hover={{ color: "white" }}
         >
           <Icon h="30px" w="30px" as={skill.icon} />
           <Text key={index}>{skill.name}</Text>

@@ -50,9 +50,9 @@ export default function Navbar() {
       p="0px 32px"
       backdropFilter="auto"
       backdropBlur="20px"
-      boxShadow="sm"
+      boxShadow="base"
     >
-      <Box>Welcome</Box>
+      <Box fontWeight="bold">Welcome</Box>
       <Flex columnGap="40px" p="0px 32px">
         {navMenuObj.map(function (value, index) {
           return (
