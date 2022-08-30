@@ -44,7 +44,7 @@ export default function Navbar() {
       left="0px"
       top="0px"
       alignItems="center"
-      justifyContent="space-around"
+      justifyContent={{ base: "space-between", md: "space-around" }}
       columnGap="32px"
       p="0px 32px"
       backdropFilter="auto"
@@ -54,7 +54,7 @@ export default function Navbar() {
       <Box color="black" fontWeight="bold">
         Welcome
       </Box>
-      <Flex columnGap="40px" p="0px 32px">
+      <Flex columnGap="40px">
         {navMenuObj.map(function (value, index) {
           return (
             <Box
