@@ -14,14 +14,14 @@ const skills = [
 
 export default function Skills() {
   return (
-    <Flex justifyContent="center" gap="30px" flexWrap="wrap">
+    <Flex justifyContent="center" gap="50px" flexWrap="wrap">
       {skills.map((skill, index) => (
         <Flex
           key={index}
           flexDirection="column"
           justifyContent="center"
           align="center"
-          gap={{ base: "32px", sm: "8px" }}
+          gap="8px"
           _hover={{ color: "white" }}
         >
           <Icon h="30px" w="30px" as={skill.icon} />

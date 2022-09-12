@@ -6,7 +6,7 @@ import Skills from "./Skills";
 export default function About() {
   const title = "Hi, I´m Erick Narvaez";
   const titleArray = title.split("");
-  const subTitle = "a starting web developer";
+  const subTitle = "a web developer";
   const subTitleArray = subTitle.split("");
 
   return (
@@ -70,7 +70,7 @@ export default function About() {
                 return (
                   <Text
                     display="inline-block"
-                    color="Black"
+                    color="textColor"
                     _hover={{ color: "navBar" }}
                     key={index}
                   >
@@ -81,7 +81,7 @@ export default function About() {
                 return (
                   <Text
                     display="inline-block"
-                    color="Black"
+                    color="textColor"
                     _hover={{ color: "navBar", transform: "skewX(15deg)" }}
                     key={index}
                   >

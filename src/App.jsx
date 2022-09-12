@@ -9,7 +9,7 @@ export default function App() {
     <Flex
       p={{ base: "16px", sm: "32px" }}
       rowGap="120px"
-      bgGradient="linear-gradient(to right, #757f9a, #d7dde8)"
+      bg="bgApp"
       flexDirection="column"
     >
       <About />
