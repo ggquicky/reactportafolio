@@ -33,7 +33,10 @@ export default function About() {
           src={profileP}
           alt="profile"
           boxShadow="md"
-          _hover={{ boxShadow: "dark-lg" }}
+          _hover={{
+            boxShadow:
+              "rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,white 0px 5px 10px,white 0px 15px 40px",
+          }}
         />
         <Box>
           <Heading transition=" color 2s ease-out">

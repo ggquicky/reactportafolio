@@ -26,6 +26,11 @@ export const theme = extendTheme({
         // _dark: "linear-gradient(to right, #2c3e50, #d7dde8)",
         _dark: "#1f1f1f",
       },
+      shadowImg: {
+        default: "dark-lg",
+        _dark:
+          "rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,white 0px 5px 10px,white 0px 15px 40px",
+      },
     },
   },
 });
