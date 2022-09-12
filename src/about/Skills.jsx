@@ -16,8 +16,8 @@ const skills = [
   { name: "Chakra UI", icon: SiChakraui, color: "#41c7bf" },
   { name: "React", icon: FaReact, color: "#53c1de" },
   { name: "VUE", icon: FaVuejs, color: "#4bb483" },
-  { name: "NEXTjs", icon: TbBrandNextjs, color: "white" },
-  { name: "PHP", icon: SiPhp, color: "white" },
+  { name: "NEXTjs", icon: TbBrandNextjs, color: "hoverTextColor" },
+  { name: "PHP", icon: SiPhp, color: "hoverTextColor" },
   { name: "LARAVEL", icon: FaLaravel, color: "#ff291a" },
 ];
 

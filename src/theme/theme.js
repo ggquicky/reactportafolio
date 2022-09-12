@@ -9,10 +9,23 @@ export const theme = extendTheme({
         default: "black",
         _dark: "white",
       },
+      hoverTextColor: {
+        default: "white",
+        _dark: "black",
+      },
+      hoverNavButton: {
+        default: "white",
+        _dark: "yellow",
+      },
+      navbar: {
+        default: "none",
+        _dark: "black",
+      },
       bgApp: {
         default: "linear-gradient(to right, #757f9a, #d7dde8)",
-        _dark: "linear-gradient(to right, #2c3e50, #d7dde8)",
+        // _dark: "linear-gradient(to right, #2c3e50, #d7dde8)",
+        _dark: "#1d1d1d",
       },
-  },
+    },
   },
 });

@@ -11,10 +11,21 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
+import { useState } from "react";
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [toggleTheme, setToggleTheme] = useState(true);
+
+  function setTheme() {
+    if (toggleTheme) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+    setToggleTheme(!toggleTheme);
+  }
 
   let navMenuObj = [
     {
@@ -50,16 +61,18 @@ export default function Navbar() {
       backdropFilter="auto"
       backdropBlur="20px"
       boxShadow="base"
+      bg="navbar"
     >
-      <Box color="black" fontWeight="bold">
+      <Box color="textColor" fontWeight="bold">
         Welcome
       </Box>
+
       <Flex columnGap="40px">
         {navMenuObj.map(function (value, index) {
           return (
             <Box
               as="a"
-              color="black"
+              color="textColor"
               key={index}
               href={value.href}
               fontSize="20px"
@@ -73,7 +86,17 @@ export default function Navbar() {
           );
         })}
         <IconButton
-          color="black"
+          color="textColor"
+          _hover={{ bg: "none", color: "yellow" }}
+          onClick={setTheme}
+          icon={
+            !toggleTheme ? <SunIcon w={6} h={6} /> : <MoonIcon w={6} h={6} />
+          }
+          variant={"ghost"}
+          aria-label={"Toggle Navigation"}
+        />
+        <IconButton
+          color="textColor"
           display={{ base: "block", sm: "none" }}
           onClick={onOpen}
           icon={

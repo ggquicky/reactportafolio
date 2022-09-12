@@ -43,7 +43,7 @@ export default function About() {
                   <Text
                     display="inline-block"
                     color="textColor"
-                    _hover={{ color: "black" }}
+                    _hover={{ color: "hoverTextColor" }}
                     key={index}
                   >
                     &nbsp;
@@ -54,7 +54,10 @@ export default function About() {
                   <Text
                     display="inline-block"
                     color="textColor"
-                    _hover={{ color: "navBar", transform: "skewX(15deg)" }}
+                    _hover={{
+                      color: "hoverTextColor",
+                      transform: "skewX(15deg)",
+                    }}
                     key={index}
                   >
                     {" "}
@@ -71,7 +74,7 @@ export default function About() {
                   <Text
                     display="inline-block"
                     color="textColor"
-                    _hover={{ color: "navBar" }}
+                    _hover={{ color: "hoverTextColor" }}
                     key={index}
                   >
                     &nbsp;
@@ -82,7 +85,10 @@ export default function About() {
                   <Text
                     display="inline-block"
                     color="textColor"
-                    _hover={{ color: "navBar", transform: "skewX(15deg)" }}
+                    _hover={{
+                      color: "hoverTextColor",
+                      transform: "skewX(15deg)",
+                    }}
                     key={index}
                   >
                     {" "}
