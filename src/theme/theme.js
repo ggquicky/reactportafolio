@@ -7,7 +7,7 @@ export const theme = extendTheme({
       success: "green.500",
       textColor: {
         default: "black",
-        _dark: "white",
+        _dark: "#e8e7e9",
       },
       hoverTextColor: {
         default: "white",
@@ -24,7 +24,7 @@ export const theme = extendTheme({
       bgApp: {
         default: "linear-gradient(to right, #757f9a, #d7dde8)",
         // _dark: "linear-gradient(to right, #2c3e50, #d7dde8)",
-        _dark: "#1d1d1d",
+        _dark: "#1f1f1f",
       },
     },
   },

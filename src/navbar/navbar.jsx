@@ -67,7 +67,7 @@ export default function Navbar() {
         Welcome
       </Box>
 
-      <Flex columnGap="40px">
+      <Flex columnGap={{ base: "0", sm: "40px" }}>
         {navMenuObj.map(function (value, index) {
           return (
             <Box
@@ -109,16 +109,16 @@ export default function Navbar() {
 
       <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
-        <DrawerContent bgGradient="linear-gradient(to left, #757f9a, #d7dde8)">
+        <DrawerContent bg="bgApp">
           <DrawerHeader>
-            <DrawerCloseButton color="white" w={6} h={6} />
+            <DrawerCloseButton color="textColor" w={6} h={6} />
           </DrawerHeader>
           <DrawerBody display="flex" flexDirection="column" rowGap="16px">
             {navMenuObj.map(function (value, index) {
               return (
                 <Box
                   as="a"
-                  color="black"
+                  color="textColor"
                   key={index}
                   href={value.href}
                   fontSize="20px"
