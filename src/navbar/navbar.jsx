@@ -9,23 +9,14 @@ import {
   DrawerOverlay,
   IconButton,
   useDisclosure,
+  useColorMode,
 } from "@chakra-ui/react";
 
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
-import { useState } from "react";
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [toggleTheme, setToggleTheme] = useState(true);
-
-  function setTheme() {
-    if (toggleTheme) {
-      document.documentElement.setAttribute("data-theme", "dark");
-    } else {
-      document.documentElement.setAttribute("data-theme", "light");
-    }
-    setToggleTheme(!toggleTheme);
-  }
+  const { colorMode, toggleColorMode } = useColorMode();
 
   let navMenuObj = [
     {
@@ -88,9 +79,13 @@ export default function Navbar() {
         <IconButton
           color="textColor"
           _hover={{ bg: "none", color: "yellow" }}
-          onClick={setTheme}
+          onClick={toggleColorMode}
           icon={
-            !toggleTheme ? <SunIcon w={6} h={6} /> : <MoonIcon w={6} h={6} />
+            colorMode === "light" ? (
+              <MoonIcon w={6} h={6} />
+            ) : (
+              <SunIcon w={6} h={6} />
+            )
           }
           variant={"ghost"}
           aria-label={"Toggle Navigation"}
