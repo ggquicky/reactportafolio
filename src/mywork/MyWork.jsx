@@ -3,6 +3,7 @@ import shoesFlex from "./media/soleanklepreview.jpg";
 import calulator from "./media/calculatorjs.jpg";
 import ninjamailpreview from "./media//ninjamailpreview.jpg";
 import creditcardspreview from "./media/creditcardspreview.jpg";
+import rickmortypreview from "./media/rickmortypreview.jpg";
 
 const projects = [
   {
@@ -24,6 +25,11 @@ const projects = [
     url: "https://ggquicky.github.io/nerdifyLabs-calculator/",
     name: "Calculator ",
     imgUrl: calulator,
+  },
+  {
+    url: "https://nerdifylabs-ricky-morty.vercel.app/",
+    name: "Rick & Morty Fetch App",
+    imgUrl: rickmortypreview,
   },
 ];
 
