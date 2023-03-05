@@ -94,7 +94,6 @@ export default function About() {
                     }}
                     key={index}
                   >
-                    {" "}
                     {value}
                   </Text>
                 );

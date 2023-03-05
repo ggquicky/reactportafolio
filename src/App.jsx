@@ -7,6 +7,13 @@ import { Canvas } from "@react-three/fiber";
 
 import Stars from "./Stars/Stars";
 
+import {
+  OrbitControls,
+  OrthographicCamera,
+  PerspectiveCamera,
+} from "@react-three/drei";
+import { MarsModel } from "./about/Mars";
+
 export default function App() {
   return (
     <Flex
@@ -18,12 +25,16 @@ export default function App() {
       <About />
       <MyWork />
       <ContactMe />
-      <Navbar />
-      <Box pos="absolute" h="100%" w="100%" zIndex={-1} top={0} left={0}>
-        <Canvas camera={{ position: [0, 0, 1] }}>
-          <Stars />
+      <Box h="260px">
+        <Canvas camera={[0, 0, 200]}>
+          <ambientLight intensity={1} />
+
+          <MarsModel />
+          <OrbitControls enableZoom={false} autoRotate />
         </Canvas>
       </Box>
+
+      <Navbar />
     </Flex>
   );
 }
