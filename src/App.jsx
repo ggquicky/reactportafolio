@@ -5,13 +5,9 @@ import ContactMe from "./contactme/ContactMe";
 import { Flex, Box } from "@chakra-ui/react";
 import { Canvas } from "@react-three/fiber";
 
-import Stars from "./Stars/Stars";
+// import Stars from "./Stars/Stars";
 
-import {
-  OrbitControls,
-  OrthographicCamera,
-  PerspectiveCamera,
-} from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import { MarsModel } from "./about/Mars";
 
 export default function App() {
