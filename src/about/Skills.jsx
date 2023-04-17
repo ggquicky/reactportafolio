@@ -5,6 +5,7 @@ import {
   SiJavascript,
   SiPhp,
   SiTailwindcss,
+  SiThreedotjs,
   SiTypescript,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
@@ -19,6 +20,7 @@ const skills = [
   { name: "NEXTjs", icon: TbBrandNextjs, color: "#9b4eee" },
   { name: "PHP", icon: SiPhp, color: "#6082bb" },
   { name: "LARAVEL", icon: FaLaravel, color: "#ff291a" },
+  { name: "THREE", icon: SiThreedotjs, color: "white" },
 ];
 
 export default function Skills() {
