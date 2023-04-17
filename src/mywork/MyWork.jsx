@@ -43,7 +43,7 @@ export default function MyWork() {
       justifyContent="center"
       id="sectionMyWork"
     >
-      <Heading color="textColor">These are some of my projects</Heading>
+      <Heading color="textColor">These are some of my mockup projects</Heading>
 
       <Flex justifyContent="center" gap="32px" wrap="wrap">
         {projects.map((project, index) => (
