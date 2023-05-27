@@ -9,6 +9,10 @@ import { Canvas } from "@react-three/fiber";
 
 import { OrbitControls } from "@react-three/drei";
 import { MarsModel } from "./about/Mars";
+import {EnAvantar} from "./about/EnAvatar";
+
+
+
 
 export default function App() {
   return (
@@ -21,12 +25,12 @@ export default function App() {
       <About />
       <MyWork />
       <ContactMe />
-      <Box h="260px">
-        <Canvas camera={[0, 0, 200]}>
+      <Box h="500px">
+        <Canvas camera={[0, 0, 0]}>
           <ambientLight intensity={1} />
-
-          <MarsModel />
-          <OrbitControls enableZoom={false} autoRotate />
+            <EnAvantar />
+          {/*<MarsModel />*/}
+          <OrbitControls  />
         </Canvas>
       </Box>
 
