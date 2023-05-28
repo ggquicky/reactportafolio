@@ -22,6 +22,9 @@ export function EnAvantar(props) {
   const { nodes, materials } = useGLTF('/models/ENAvatar-transformed.glb')
 
     const {animations: typingAnimation} = useFBX("/animations/Typing.fbx")
+  const {animations: stadingAnimation} = useFBX("/animations/StandingIdle.fbx")
+  const {animations: fallingAnimation} = useFBX("/animations/FallingIdle.fbx")
+
     typingAnimation[0].name = "Typing"
     const {actions} = useAnimations(typingAnimation, group)
 
