@@ -6,7 +6,7 @@ Command: npx gltfjsx@6.1.4 ENAvatar.glb --transform -t -k s
 import * as THREE from 'three'
 import React, {useEffect, useRef} from 'react'
 import {useAnimations, useFBX, useGLTF} from '@react-three/drei'
-import {useFrame} from "@react-three/fiber";
+import {useFrame, useThree} from "@react-three/fiber";
 import {useControls} from "leva";
 export function EnAvantar(props) {
   const {animation} = props
@@ -16,6 +16,7 @@ export function EnAvantar(props) {
      wireFrame: false,
    })
     const group = useRef()
+
   const { nodes, materials } = useGLTF('/models/ENAvatar-transformed.glb')
 
     const {animations: typingAnimation} = useFBX("/animations/Typing.fbx")
