@@ -7,14 +7,23 @@ import { Canvas } from "@react-three/fiber";
 
 // import Stars from "./Stars/Stars";
 
-import { OrbitControls } from "@react-three/drei";
-import { MarsModel } from "./about/Mars";
-import {EnAvantar} from "./about/EnAvatar";
+import {
+  Environment,
+  OrbitControls, PerspectiveCamera,
 
+} from "@react-three/drei";
 
-
+import { EnAvantar } from "./about/EnAvatar";
+import { useControls } from "leva";
 
 export default function App() {
+  const { animation } = useControls({
+    animation: {
+      value: "Typing",
+      options: ["Standing", "Falling", "Typing"],
+    },
+  });
+
   return (
     <Flex
       p={{ base: "16px", sm: "32px" }}
@@ -26,11 +35,13 @@ export default function App() {
       <MyWork />
       <ContactMe />
       <Box h="500px">
-        <Canvas camera={[0, 0, 0]}>
-          <ambientLight intensity={1} />
-            <EnAvantar />
-          {/*<MarsModel />*/}
-          <OrbitControls  />
+        <Canvas >
+          <PerspectiveCamera makeDefault fov={100} position={[0, 2, 2]} resolution={1024} />
+
+          <Environment preset={"sunset"} />
+          <EnAvantar animation={animation} />
+
+          <OrbitControls />
         </Canvas>
       </Box>
 

@@ -8,25 +8,25 @@ import React, {useEffect, useRef} from 'react'
 import {useAnimations, useFBX, useGLTF} from '@react-three/drei'
 import {useFrame} from "@react-three/fiber";
 import {useControls} from "leva";
-
-
-
-
-
 export function EnAvantar(props) {
-   const {headFollow,cursorFollow} = useControls({
+  const {animation} = props
+   const {headFollow,cursorFollow,wireFrame} = useControls({
      headFollow: false,
-     cursorFollow: false
+     cursorFollow: false,
+     wireFrame: false,
    })
     const group = useRef()
   const { nodes, materials } = useGLTF('/models/ENAvatar-transformed.glb')
 
     const {animations: typingAnimation} = useFBX("/animations/Typing.fbx")
-  const {animations: stadingAnimation} = useFBX("/animations/StandingIdle.fbx")
+  const {animations: standingAnimation} = useFBX("/animations/StandingIdle.fbx")
   const {animations: fallingAnimation} = useFBX("/animations/FallingIdle.fbx")
 
     typingAnimation[0].name = "Typing"
-    const {actions} = useAnimations(typingAnimation, group)
+  standingAnimation[0].name = "Standing"
+  fallingAnimation[0].name = "Falling"
+
+    const {actions} = useAnimations([fallingAnimation[0],standingAnimation[0],typingAnimation[0]], group)
 
   useFrame(state => {
     if(headFollow){
@@ -39,8 +39,17 @@ export function EnAvantar(props) {
   })
 
     useEffect(() => {
-        actions['Typing'].reset().play()
+        actions[animation].reset().fadeIn(0.5).play()
+        return () => {
+          actions[animation].reset().fadeOut(0.5)
+  }
+    },[actions,animation])
+
+  useEffect(()=>{
+    Object.values(materials).forEach(material => {
+      material.wireframe = wireFrame;
     })
+  },[materials,wireFrame])
 
     return (
     <group position={[0,0,0]} ref={group} {...props} dispose={null}>
