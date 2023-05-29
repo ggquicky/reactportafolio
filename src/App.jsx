@@ -3,13 +3,13 @@ import About from "./about/About";
 import MyWork from "./mywork/MyWork";
 import ContactMe from "./contactme/ContactMe";
 import { Flex, Box } from "@chakra-ui/react";
-import {Canvas, useThree} from "@react-three/fiber";
+import {Canvas} from "@react-three/fiber";
 
 // import Stars from "./Stars/Stars";
 
 import {
   Environment,
-  OrbitControls, PerspectiveCamera, Stage,
+  PerspectiveCamera,
 
 } from "@react-three/drei";
 
