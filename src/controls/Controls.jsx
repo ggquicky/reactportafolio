@@ -1,11 +1,9 @@
 import {OrbitControls} from "@react-three/drei";
 
 
-export function Controls () {
-
-
-
+export function Controls() {
+    
     return (
-        <OrbitControls   makeDefault/>
+        <OrbitControls autoRotate enableZoom={false} makeDefault/>
     )
 }
