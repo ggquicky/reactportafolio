@@ -6,7 +6,7 @@ import {Box, Flex} from "@chakra-ui/react";
 import {Canvas} from "@react-three/fiber";
 
 // import Stars from "./Stars/Stars";
-import {Environment, PerspectiveCamera,} from "@react-three/drei";
+import { PerspectiveCamera,} from "@react-three/drei";
 import {PlanetModel} from "./about/PlanetModel";
 
 export default function App() {
