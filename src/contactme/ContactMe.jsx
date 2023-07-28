@@ -1,13 +1,13 @@
 import {Flex, Heading, Icon, Link, Text} from "@chakra-ui/react";
-import {GoMarkGithub} from "react-icons/go";
-import {FaLinkedin, FaMailBulk} from "react-icons/fa";
+
+import {FaGithub,FaLinkedin, FaMailBulk} from "react-icons/fa";
 
 export default function ContactMe() {
     const socials = [
         {
             name: "Github",
             action: "https://github.com/ggquicky",
-            icon: GoMarkGithub,
+            icon: FaGithub,
         },
         {
             name: "Linkedin",
