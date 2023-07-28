@@ -31,7 +31,7 @@ export default function App() {
                 <Canvas>
                     <PerspectiveCamera makeDefault fov={50} position={[0, 3, 5.2]}/>
                     <ambientLight intensity={1} />
-                    <Environment preset={"sunset"}/>
+                    
 
                     <group>
 
