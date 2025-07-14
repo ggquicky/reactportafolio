@@ -1,33 +1,24 @@
 import { Box, Flex, Heading, Image } from "@chakra-ui/react";
-import shoesFlex from "./media/soleanklepreview.jpg";
+
 import calulator from "./media/calculatorjs.jpg";
-import ninjamailpreview from "./media//ninjamailpreview.jpg";
-import creditcardspreview from "./media/creditcardspreview.jpg";
+
 import rickmortypreview from "./media/rickmortypreview.jpg";
+import vueStudio from "./media/vueStudio.png";
 
 const projects = [
   {
-    url: "https://ggquicky.github.io/nerdifyLabs-shoesflex/",
-    name: "shoes Flex ",
-    imgUrl: shoesFlex,
+    url:"https://vue-studio-ghibli.vercel.app/",
+    name: "Vue Studio Ghibli Movie Catalog",
+    imgUrl: vueStudio
   },
-  {
-    url: "https://ggquicky.github.io/nerdifyLabs-ninjaMail/",
-    name: "Ninja Mail ",
-    imgUrl: ninjamailpreview,
-  },
-  {
-    url: "https://ggquicky.github.io/nerdifyLabs-creditcard/",
-    name: "Credit Card ",
-    imgUrl: creditcardspreview,
-  },
+
   {
     url: "https://ggquicky.github.io/nerdifyLabs-calculator/",
     name: "Calculator ",
     imgUrl: calulator,
   },
   {
-    url: "https://nerdifylabs-ricky-morty.vercel.app/",
+    url: "https://rick-morty-catalog.vercel.app/",
     name: "Rick & Morty Fetch App",
     imgUrl: rickmortypreview,
   },
